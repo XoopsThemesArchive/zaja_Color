@@ -1,0 +1,182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<{$xoops_langcode}>" lang="<{$xoops_langcode}>">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=<{$xoops_charset}>" />
+<meta http-equiv="content-language" content="<{$xoops_langcode}>" />
+<meta name="robots" content="<{$xoops_meta_robots}>" />
+<meta name="keywords" content="<{$xoops_meta_keywords}>" />
+<meta name="description" content="<{$xoops_meta_description}>" />
+<meta name="rating" content="<{$xoops_meta_rating}>" />
+<meta name="author" content="<{$xoops_meta_author}>" />
+<meta name="copyright" content="<{$xoops_meta_copyright}>" />
+<meta name="generator" content="XOOPS" />
+<title><{$xoops_sitename}> - <{$xoops_pagetitle}></title>
+<link href="<{$xoops_url}>/favicon.ico" rel="SHORTCUT ICON" />
+<link rel="stylesheet" type="text/css" media="all" href="<{$xoops_url}>/xoops.css" />
+<link rel="stylesheet" type="text/css" media="all" href="<{$xoops_themecss}>" />
+<!-- RMV: added module header -->
+<{$xoops_module_header}>
+<script type="text/javascript">
+<!--
+<{$xoops_js}>
+//-->
+</script>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="0" class="okvir">
+  <tr>
+    <td> <table cellspacing="0">
+        <tr id="header"> 
+          <td colspan="6" id="headerbanner"> <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr> 
+                <td width="266" id="headerbanner1"><img src="<{$xoops_url}>/themes/Zaja_Color/logo.gif" /></td>
+                <td  id="headerbanner"> <div align="center"><{$xoops_banner}></div></td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td width="20%" height="29" align="center" bgcolor="#EF9603" id="headerbar"><img src="<{$xoops_url}>/themes/Zaja_Color/blue_arrow.png" width="16" height="8" /><a href="<{$xoops_url}>/index.php">Home</a></td>
+          <td width="20%" align="center" bgcolor="#D85215" class="gumbi" id="headerbar"><img src="<{$xoops_url}>/themes/Zaja_Color/blue_arrow.png" width="16" height="8" /><a href="<{$xoops_url}>/modules/news/">News</a></td>
+          <td width="20%" align="center" bgcolor="#952722" class="gumbi" id="headerbar"><img src="<{$xoops_url}>/themes/Zaja_Color/blue_arrow.png" width="16" height="8" /><a href="<{$xoops_url}>/modules/xtremguestbook/">Guestbook</a></td>
+          <td width="20%" align="center" bgcolor="#97AE6D" class="gumbi" id="headerbar"><img src="<{$xoops_url}>/themes/Zaja_Color/blue_arrow.png" width="16" height="8" /><a href="<{$xoops_url}>/modules/mydownloads/">Download</a></td>
+          <td width="20%" align="center" bgcolor="#4080BF" class="gumbi" id="headerbar"><img src="<{$xoops_url}>/themes/Zaja_Color/blue_arrow.png" width="16" height="8" /><a href="<{$xoops_url}>/modules/contact/">Contact</a> 
+          </td>
+        </tr>
+      </table> 
+      <table cellspacing="0">
+    <tr>
+      <td id="leftcolumn"><br />
+
+    <form method="post" action="<{$xoops_url}>/search.php">
+    <table border="0" cellpadding="0" cellspacing="0">
+    <tr>
+    <td align="left" valign="top">
+    &nbsp;<input type="text" class="input" name="query" size="8" />
+                <input type="hidden" name="action" value="results" />
+    </td>
+    <td align="left" valign="top" width="100%">
+      <input type="image" src="<{$xoops_url}>/themes/Zaja_Color/quickie_search.gif" border="0" alt="Pretražite Metal Shop">
+    </td>
+    </tr>
+    </table>
+    </form>
+  <!-- Start left blocks loop -->
+        <{foreach item=block from=$xoops_lblocks}>
+          <div class="blockTitle"><{$block.title}></div>
+            <div class="blockContent"><{$block.content}></div>
+        <{/foreach}>
+        <!-- End left blocks loop -->
+
+      </td>
+
+      <td id="centercolumn">
+ <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td class="pozdrav"> &nbsp;&nbsp;<{if $xoops_isuser}> Hey <a href="<{$xoops_url}>/user.php"><{$xoops_uname}></a>&nbsp;&nbsp;&nbsp;<a href="<{$xoops_url}>/user.php">your 
+                  account </a>&nbsp; <{else}> <a href="<{$xoops_url}>/register.php">Register 
+                  now</a> on My Site! <{/if}> <span class="right"> <{if $xoops_isuser}> 
+                  <a href="<{$xoops_url}>/user.php?op=logout"></a> <{else}> &nbsp;&nbsp;&nbsp;<a href="<{$xoops_url}>/user.php">Login</a> 
+                  <{/if}> </span></td>
+                <td class="vrijeme"><span id="clock"></span><script language="JavaScript" type="text/javascript" src="<{$xoops_url}>/themes/Zaja_Color/clock.js">
+      </script> </td>
+              </tr>
+            </table>
+			<br />
+        <!-- Display center blocks if any -->
+        <{if $xoops_showcblock == 1}>
+
+        <table cellspacing="0">
+          <tr>
+            <td id="centerCcolumn" colspan="2">
+
+            <!-- Start center-center blocks loop -->
+            <{foreach item=block from=$xoops_ccblocks}>
+              <div style="padding: 5px;">
+              <fieldset>
+                  <legend class="blockTitle"><{$block.title}></legend>
+                <div class="blockContent"><{$block.content}></div>
+                 </fieldset>
+               </div>
+            <{/foreach}>
+            <!-- End center-center blocks loop -->
+
+            </td>
+          </tr>
+          <tr>
+            <td id="centerLcolumn">
+
+            <!-- Start center-left blocks loop -->
+              <{foreach item=block from=$xoops_clblocks}>
+                <div style="padding: 0px 0px 0px 8px;"><br />
+                 <fieldset>
+                       <legend class="blockTitle"><{$block.title}></legend>
+                          <div class="blockContent"><{$block.content}></div>
+                     </fieldset>
+                    </div>
+              <{/foreach}>
+            <!-- End center-left blocks loop -->
+
+            </td><td id="centerRcolumn">
+
+            <!-- Start center-right blocks loop -->
+              <{foreach item=block from=$xoops_crblocks}>
+                <div style="padding: 0px 5px 0px 0px;">
+                 <fieldset>
+                 <legend class="blockTitle"><{$block.title}></legend>
+                  <div class="blockContent"><{$block.content}></div>
+                </fieldset>
+                </div>
+              <{/foreach}>
+            <!-- End center-right blocks loop -->
+
+            </td>
+          </tr>
+        </table>
+
+        <{/if}>
+        <!-- End display center blocks -->
+
+        <div id="content">
+          <{$xoops_contents}>
+        </div>
+      </td>
+
+      <{if $xoops_showrblock == 1}>
+
+      <td id="rightcolumn">
+        <!-- Start right blocks loop -->
+        <{foreach item=block from=$xoops_rblocks}>
+          <div class="blockTitle"><{$block.title}></div>
+          <div class="blockContent"><{$block.content}></div>
+        <{/foreach}>
+        <!-- End right blocks loop -->
+      </td>
+
+      <{/if}>
+
+    </tr>
+  </table>
+
+      <table cellpadding="0" cellspacing="0">
+        <tr> 
+          <td width="20%" align="center" bgcolor="#EF9603" id="headerbar"><img src="<{$xoops_url}>/themes/Zaja_Color/blue_arrow.png" width="16" height="8" /><a href="<{$xoops_url}>/index.php">Home</a></td>
+          <td width="20%" align="center" bgcolor="#D85215" class="gumbi" id="headerbar"><img src="<{$xoops_url}>/themes/Zaja_Color/blue_arrow.png" width="16" height="8" /><a href="<{$xoops_url}>/modules/news/">News</a></td>
+          <td width="20%" align="center" bgcolor="#952722" class="gumbi" id="headerbar"><img src="<{$xoops_url}>/themes/Zaja_Color/blue_arrow.png" width="16" height="8" /><a href="<{$xoops_url}>/modules/xtremguestbook/">Guestbook</a></td>
+          <td width="20%" align="center" bgcolor="#97AE6D" class="gumbi" id="headerbar"><img src="<{$xoops_url}>/themes/Zaja_Color/blue_arrow.png" width="16" height="8" /><a href="<{$xoops_url}>/modules/mydownloads/">Download</a></td>
+          <td width="20%" align="center" bgcolor="#336699" class="gumbi" id="headerbar"><img src="<{$xoops_url}>/themes/Zaja_Color/blue_arrow.png" width="16" height="8" /><a href="<{$xoops_url}>/modules/contact/">Contact</a> 
+          </td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<br />
+<table class="foot" width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td ><br /> &nbsp;&nbsp;&nbsp;Powered by XOOPS 2.0 © 2001-2003 <a href="http://www.xoops.org/" target="_blank">The 
+      XOOPS Project</a>&nbsp;&nbsp;&nbsp;&nbsp;[Design by <a href="http://7dana.com">SevenDays 
+      Design</a>]<br /> <font size="1"><br />
+      </font></td>
+  </tr>
+</table>
+</body>
+</html>
